@@ -1,4 +1,4 @@
-/* $(document).ready(function(){
+$(document).ready(function(){
   $('.carousel__inner').slick({
     speed: 1200,
     //adaptiveHeight: true,
@@ -8,46 +8,28 @@
       {
         breakpoint: 992,
         settings: {
+          arrows: true,
+          infinite: true,
+          cssEase: 'linear'
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          dots: true,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
           dots: true,
           arrows: false
         }
       }
     ]
   });
-}); */
-
-const slider = tns({
-  container: '.carousel__inner',
-  items: 1,
-  slideBy: 'page',
-  autoplay: false,
-  controls: false, //чтобы исчезли родные стрелки(кнопки)
-  nav: false, // чтоб исчезли точечки
-  responsive: [
-    {
-      640: {
-        edgePadding: 20,
-        gutter: 20,
-        items: 2
-      },
-      700: {
-        gutter: 30
-      },
-      900: {
-        items: 3
-      }
-    }
-  ]
 });
-
-document.querySelector('.prev').addEventListener('click', function () {
-  slider.goTo('prev');
-});
-
-document.querySelector('.next').addEventListener('click', function () {
-  slider.goTo('next');
-});
-
 
 $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab__active)', function() {
   $(this)
@@ -57,14 +39,69 @@ $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab__active)', function() {
 
 
 function toggleSlide(item) {
-  $(item).each(function(i) {
-    $(this).on('click', function(e) {
-      e.preventDefault();
-      $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-      $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-    })
-  });
+$(item).each(function(i) {
+  $(this).on('click', function(e) {
+    e.preventDefault();
+    $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
+    $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+  })
+});
 };
 
 toggleSlide('.catalog-item__link');
 toggleSlide('.catalog-item__back');
+
+//Modal
+
+$('[data-modal=consultation]').on('click', function() {
+$('.overlay, #consultation').fadeIn('slow');
+});
+$('.modal__close').on('click', function() {
+$('.overlay, #consultation, #order, #thanks').fadeOut('slow');
+});
+
+$('.button_mini').each(function(i) {
+$(this).on('click', function(){
+  $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+  $('.overlay, #order').fadeIn('slow');
+})
+});
+
+/* const slider = tns({
+  container: '.carousel__inner',
+  items: 1,
+  slideBy: 'page',
+  autoplay: false,
+  controls: false, //чтобы исчезли родные стрелки(кнопки)
+  nav: false, // чтоб исчезли точечки
+  navPosition: 'bottom',
+  preventScrollOnTouch: 'auto', // bugfix warning console on touch
+  autoWidth: false,
+  controls: false,
+  rewind: true,
+  responsive: {
+    576: {
+      edgePadding: 20,
+      gutter: 20,
+      items: 1,
+      nav: true
+    },
+    768: {
+      autoWidth: true,
+      gutter: 30,
+      nav: true
+    },
+    992: {
+      items: 1,
+      nav: false
+    }
+  },
+});
+
+document.querySelector('.prev').addEventListener('click', function () {
+  slider.goTo('prev');
+});
+
+document.querySelector('.next').addEventListener('click', function () {
+  slider.goTo('next');
+}); */

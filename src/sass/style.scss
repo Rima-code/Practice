@@ -2,6 +2,14 @@
 *{
   font-family: 'Museo Sans Cyrl', sans-serif;
 }
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+}
 .container {
   position: relative;
   max-width: 950px;
@@ -17,4 +25,6 @@
 @import "blocks/carousel";
 @import "blocks/catalog";
 @import "blocks/feedback";
+@import "blocks/footer";
+@import "blocks/modal";
 @import "media";
