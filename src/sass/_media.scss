@@ -342,4 +342,21 @@
       }
     }
   }
+  .modal {
+    width: 280px;
+    min-height: 300px;
+    padding: 28px 15px 30px 15px;
+    &__subtitle {
+      font-size: 16px;
+    }
+    &__descr {
+      font-size: 14px;
+    }
+    &_mini {
+      min-height: 100px;
+    }
+    &__hidden {
+      display: none;
+    }
+  }
 }
