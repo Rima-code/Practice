@@ -231,12 +231,12 @@
       margin-top: 66px;
       margin-right: 10px;
       margin-left: 10px;
-      width: 300px;
+      width: 280px;
       display: flex;
       justify-content: space-between;
     }
     &__icon {
-      width: 76px;
+      width: 66px;
       font-size: 12px;
       img {
         margin-bottom: 15px;
@@ -246,12 +246,13 @@
   .header {
     &__logo {
       width: 200px;
+      margin-right: 5px;
     }
     &__official {
       display: none;
     }
     &__phone {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   .advantages {
@@ -357,6 +358,27 @@
     }
     &__hidden {
       display: none;
+    }
+  }
+  .button {
+    width: 125px;
+    height: 25px;
+    font-size: 10px;
+    &_main {
+      margin-top: 67px;
+      width: 200px;
+      height: 35px;
+      font-size: 13px;
+    }
+    &_submit {
+      width: 100%;
+      height: 35px;
+      font-size: 13px;
+    }
+    &_mini {
+      width: 110px;
+      height: 30px;
+      font-size: 12px;
     }
   }
 }

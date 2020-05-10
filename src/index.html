@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <section class="promo">
+  <section id="up" class="promo">
     <div class="container">
 
       <header class="header">
@@ -62,7 +63,7 @@
   </section>
   <!-- promo -->
 
-  <section class="advantages">
+  <div class="advantages">
     <div class="container">
 
       <div class="titles">НАШИ ПРЕИМУЩЕСТВА</div>
@@ -83,7 +84,7 @@
         <!-- item -->
 
         <div class="advantages__item">
-          <img src="icons/heart.png" alt="heart">
+          <img src="icons/heart.png" alt="heart" class="advantages_animated">
           <div class="advantages__descr">
             <div class="advantages__header">Заботимся о здоровье</div>
             <div class="advantages__subheader">
@@ -113,7 +114,7 @@
       <!-- advantages__wrapper -->
     </div>
     <!-- container -->
-  </section>
+  </div>
   <!-- advantages -->
   <section class="consultation">
     <div class="container">
@@ -124,9 +125,9 @@
         Просто заполните форму заявки <br>
         и мы перезвоним вам в течении 10 минут
       </div>
-      <form class="feed-form" action="#">
+      <form id="consultation-form" class="feed-form" action="#">
           <input name="name" required placeholder="Ваше имя" type="text">
-          <input name="phone" required placeholder="Ваш телефон" type="number">
+          <input name="phone" required placeholder="Ваш телефон">
           <input name="email" required placeholder="Ваш E-mail" type="email">
           <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
           
@@ -134,7 +135,7 @@
     </div>
   </section>
 
-  <section class="carousel">
+  <div class="carousel">
     <div class="container">
       <div class="carousel__inner">
         <div>
@@ -150,7 +151,7 @@
       <!-- carousel__inner -->
     </div>
     <!-- container -->
-  </section>
+  </div>
 
   <section class="catalog">
     <div class="container">
@@ -162,7 +163,7 @@
       </ul>
 
       <div class="catalog__content catalog__content_active">
-        <div class="catalog-item">
+        <div class="catalog-item wow zoomIn" data-wow-duration="2s" data-wow-delay="0.2s">
           <div class="catalog-item__wrapper">
             <div class="catalog-item__content catalog-item__content_active">
               <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
@@ -171,13 +172,15 @@
               <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
             </div>
             <!-- catalog-item__content -->
-            <ul class="catalog-item__list">
-              <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
-              <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
-              <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
-              <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+            <div class="catalog-item__list">
+              <ul>
+                <li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
+                <li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
+                <li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
+                <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+              </ul>
               <a href="#" class="catalog-item__back">НАЗАД</a>
-            </ul>
+            </div>
           </div>
           <!-- catalog-item__wrapper -->
           <hr>
@@ -191,7 +194,7 @@
           </div>
         </div>
 
-        <div class="catalog-item">
+        <div class="catalog-item wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.4s">
           <div class="catalog-item__wrapper">
             <div class="catalog-item__content catalog-item__content_active">
               <img src="img/suunto.png" alt="pulsometr" class="catalog-item__img">
@@ -200,13 +203,15 @@
               <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
             </div>
             <!-- catalog-item__content -->
-            <ul class="catalog-item__list">
-              <li>Контроль сердечного ритма в режиме реального времени с отображением показателей на экране;;</li>
-              <li>Подсчет количества сожженных калорий по прошествию тренировки;</li>
-              <li>Наличие встроенного хронографа;</li>
-              <li>Блокирование кнопок.</li>
+            <div class="catalog-item__list">
+              <ul>
+                <li>Контроль сердечного ритма в режиме реального времени с отображением показателей на экране;;</li>
+                <li>Подсчет количества сожженных калорий по прошествию тренировки;</li>
+                <li>Наличие встроенного хронографа;</li>
+                <li>Блокирование кнопок.</li>
+              </ul>
               <a href="#" class="catalog-item__back">НАЗАД</a>
-            </ul>
+            </div>
           </div>
           <!-- catalog-item__wrapper -->
           <hr>
@@ -220,7 +225,7 @@
           </div>
         </div>
 
-        <div class="catalog-item">
+        <div class="catalog-item wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s">
           <div class="catalog-item__wrapper">
             <div class="catalog-item__content catalog-item__content_active">
               <img src="img/polarft4.png" alt="pulsometr" class="catalog-item__img">
@@ -229,13 +234,15 @@
               <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
             </div>
             <!-- catalog-item__content -->
-            <ul class="catalog-item__list">
-              <li>HeartTouch - отображение данных без использования кнопок монитора;</li>
-              <li>Графический индикатор целевых зон;</li>
-              <li>Запоминание всех тренировочных данных с момента последнего сброса;</li>
-              <li>Сообщения на дисплее на английском, немецком, французском и испанском.</li>
+            <div class="catalog-item__list">
+              <ul>
+                <li>HeartTouch - отображение данных без использования кнопок монитора;</li>
+                <li>Графический индикатор целевых зон;</li>
+                <li>Запоминание всех тренировочных данных с момента последнего сброса;</li>
+                <li>Сообщения на дисплее на английском, немецком, французском и испанском.</li>
+              </ul>
               <a href="#" class="catalog-item__back">НАЗАД</a>
-            </ul>
+            </div>
           </div>
           <!-- catalog-item__wrapper -->
           <hr>
@@ -249,7 +256,7 @@
           </div>
         </div>
 
-        <div class="catalog-item">
+        <div class="catalog-item wow zoomIn" data-wow-duration="2s" data-wow-delay="0.2s">
           <div class="catalog-item__wrapper">
             <div class="catalog-item__content catalog-item__content_active">
               <img src="img/suunto-baro-lime.png" alt="pulsometr" class="catalog-item__img">
@@ -258,13 +265,15 @@
               <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
             </div>
             <!-- catalog-item__content -->
-            <ul class="catalog-item__list">
-              <li>Интеллектуальные режимы работы от батареи;</li>
-              <li>Более 80 спортивных режимов;</li>
-              <li>Учитывают историю вашей активности, помогая вовремя подзаряжать батарею часов;</li>
-              <li>Водонепроницаемость: до 100 м.</li>
+            <div class="catalog-item__list">
+              <ul>
+                <li>Интеллектуальные режимы работы от батареи;</li>
+                <li>Более 80 спортивных режимов;</li>
+                <li>Учитывают историю вашей активности, помогая вовремя подзаряжать батарею часов;</li>
+                <li>Водонепроницаемость: до 100 м.</li>
+              </ul>
               <a href="#" class="catalog-item__back">НАЗАД</a>
-            </ul>
+            </div>
           </div>
           <!-- catalog-item__wrapper -->
           <hr>
@@ -278,7 +287,7 @@
           </div>
         </div>
 
-        <div class="catalog-item">
+        <div class="catalog-item wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.4s">
           <div class="catalog-item__wrapper">
             <div class="catalog-item__content catalog-item__content_active">
               <img src="img/suunto-vertical-lime.png" alt="pulsometr" class="catalog-item__img">
@@ -287,13 +296,15 @@
               <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
             </div>
             <!-- catalog-item__content -->
-            <ul class="catalog-item__list">
-              <li>GPS-часы с «умными» функциями для тренировок и восстановления;</li>
-              <li>15 часов работы от батареи с 5-секундной GPS-точностью;</li>
-              <li>Тест быстрого восстановления и тест восстановления во время сна (Firstbeat);</li>
-              <li>Планировщик интервальных тренировок.</li>
+            <div class="catalog-item__list">
+              <ul>
+                <li>GPS-часы с «умными» функциями для тренировок и восстановления;</li>
+                <li>15 часов работы от батареи с 5-секундной GPS-точностью;</li>
+                <li>Тест быстрого восстановления и тест восстановления во время сна (Firstbeat);</li>
+                <li>Планировщик интервальных тренировок.</li>
+              </ul>
               <a href="#" class="catalog-item__back">НАЗАД</a>
-            </ul>
+            </div>
           </div>
           <!-- catalog-item__wrapper -->
           <hr>
@@ -307,7 +318,7 @@
           </div>
         </div>
 
-        <div class="catalog-item">
+        <div class="catalog-item wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s">
           <div class="catalog-item__wrapper">
             <div class="catalog-item__content catalog-item__content_active">
               <img src="img/suunto-spartan-ultra.png" alt="pulsometr" class="catalog-item__img">
@@ -316,13 +327,15 @@
               <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
             </div>
             <!-- catalog-item__content -->
-            <ul class="catalog-item__list">
-              <li>Прочный корпус и длительное время работы от батареи;</li>
-              <li>В часах есть 80 установленных спортивных режимов;</li>
-              <li>Дисплеи, адаптирующиеся под выбранный режим:бег, велосипед, плавание, триатлон и т.д.;</li>
-              <li>Все часы изготовлены из материалов, выдерживающих любые условия.</li>
+            <div class="catalog-item__list">
+              <ul>
+                <li>Прочный корпус и длительное время работы от батареи;</li>
+                <li>В часах есть 80 установленных спортивных режимов;</li>
+                <li>Дисплеи, адаптирующиеся под выбранный режим:бег, велосипед, плавание, триатлон и т.д.;</li>
+                <li>Все часы изготовлены из материалов, выдерживающих любые условия.</li>
+              </ul>
               <a href="#" class="catalog-item__back">НАЗАД</a>
-            </ul>
+            </div>
           </div>
           <!-- catalog-item__wrapper -->
           <hr>
@@ -347,13 +360,15 @@
               <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
             </div>
             <!-- catalog-item__content -->
-            <ul class="catalog-item__list">
-              <li>Устройство отслеживает расстояние, темп, время, частоту пульса;</li>
-              <li>Подключаемые функции: оповещения от смартфона, публикация данных в соц. сетях;</li>
-              <li>Трекер активности: подсчет шагов, пройденного расстояния и калорий за день;</li>
-              <li>Загружайте поля данных, виджеты и приложения из Connect IQ.</li>
+            <div class="catalog-item__list">
+              <ul>
+                <li>Устройство отслеживает расстояние, темп, время, частоту пульса;</li>
+                <li>Подключаемые функции: оповещения от смартфона, публикация данных в соц. сетях;</li>
+                <li>Трекер активности: подсчет шагов, пройденного расстояния и калорий за день;</li>
+                <li>Загружайте поля данных, виджеты и приложения из Connect IQ.</li>
+              </ul>
               <a href="#" class="catalog-item__back">НАЗАД</a>
-            </ul>
+            </div>
           </div>
           <!-- catalog-item__wrapper -->
           <hr>
@@ -378,13 +393,15 @@
               <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
             </div>
             <!-- catalog-item__content -->
-            <ul class="catalog-item__list">
-              <li>Контролирует пульс, частоту сердечных сокращений, калории;</li>
-              <li>Изготовлен с водонепроницаемым корпусом;</li>
-              <li>Имеет сменные батарейки R2025/2032;</li>
-              <li>Гаджет рассчитывает ваш диапазон, зоны тренировок и пульса.</li>
+            <div class="catalog-item__list">
+              <ul>
+                <li>Контролирует пульс, частоту сердечных сокращений, калории;</li>
+                <li>Изготовлен с водонепроницаемым корпусом;</li>
+                <li>Имеет сменные батарейки R2025/2032;</li>
+                <li>Гаджет рассчитывает ваш диапазон, зоны тренировок и пульса.</li>
+              </ul>
               <a href="#" class="catalog-item__back">НАЗАД</a>
-            </ul>
+            </div>
           </div>
           <!-- catalog-item__wrapper -->
           <hr>
@@ -407,13 +424,15 @@
               <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
             </div>
             <!-- catalog-item__content -->
-            <ul class="catalog-item__list">
-              <li>Встроенный GPS с технологией SiRFInstantFix;</li>
-              <li>Дают возможность посмотреть тренировки, активность, сон на веб-сервисе Polar Flow;</li>
-              <li>Используют вибрацию для оповещения пользователя о входящем звонке;</li>
-              <li>Загрузка готовых программ тренировок.</li>
+            <div class="catalog-item__list">
+              <ul>
+                <li>Встроенный GPS с технологией SiRFInstantFix;</li>
+                <li>Дают возможность посмотреть тренировки, активность, сон на веб-сервисе Polar Flow;</li>
+                <li>Используют вибрацию для оповещения пользователя о входящем звонке;</li>
+                <li>Загрузка готовых программ тренировок.</li>
+              </ul>
               <a href="#" class="catalog-item__back">НАЗАД</a>
-            </ul>
+            </div>
           </div>
           <!-- catalog-item__wrapper -->
           <hr>
@@ -436,13 +455,15 @@
               <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
             </div>
             <!-- catalog-item__content -->
-            <ul class="catalog-item__list">
-              <li>Прочный корпус и длительное время работы батареи;</li>
-              <li>В часах установленны 80 спортивных режимов;</li>
-              <li>Дисплеи, адаптирующиеся под выбранный режим:бег, велосипед, плавание и триатлон;</li>
-              <li>Все часы изготовлены из прочных материалов.</li>
+            <div class="catalog-item__list">
+              <ul>
+                <li>Прочный корпус и длительное время работы батареи;</li>
+                <li>В часах установленны 80 спортивных режимов;</li>
+                <li>Дисплеи, адаптирующиеся под выбранный режим:бег, велосипед, плавание и триатлон;</li>
+                <li>Все часы изготовлены из прочных материалов.</li>
+              </ul>
               <a href="#" class="catalog-item__back">НАЗАД</a>
-            </ul>
+            </div>
           </div>
           <!-- catalog-item__wrapper -->
           <hr>
@@ -464,7 +485,7 @@
       <h2 class="titles">отзывы клиентов</h2>
       <div class="feedback-wrapper">
 
-        <div class="feedback-wrapper__item">
+        <div class="feedback-wrapper__item fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.5s">
           <img src="img/woman.png" alt="woman" class="feedback__img">
           <div class="feedback__descr">
             <div class="feedback__title">Ирина Иванченко</div>
@@ -482,7 +503,7 @@
         </div>
         <hr>
 
-        <div class="feedback-wrapper__item">
+        <div class="feedback-wrapper__item fadeInUp wow" data-wow-duration="1s" data-wow-delay="0.5s">
           <img src="img/man.png" alt="man" class="feedback__img">
           <div class="feedback__descr">
             <div class="feedback__title">Иван Сёмочкин</div>
@@ -498,7 +519,7 @@
         </div>
         <hr>
 
-        <div class="feedback-wrapper__item">
+        <div class="feedback-wrapper__item fadeInUp wow" data-wow-duration="2s" data-wow-delay="0.5s">
           <img src="img/woman_run.png" alt="woman running" class="feedback__img">
           <div class="feedback__descr">
             <div class="feedback__title">Юлия Дашкина</div>
@@ -524,7 +545,7 @@
   </section>
 
   <footer class="footer">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.430307459345!2d37.644807315391816!3d55.76839799825725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2sMyasnitskiy%20Proyezd%2C%204%2F3%2C%20Moskva%2C%20Russia%2C%20107078!5e0!3m2!1sen!2s!4v1588104812736!5m2!1sen!2s" width="100%" height="630" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.430307459345!2d37.644807315391816!3d55.76839799825725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2sMyasnitskiy%20Proyezd%2C%204%2F3%2C%20Moskva%2C%20Russia%2C%20107078!5e0!3m2!1sen!2s!4v1588104812736!5m2!1sen!2s" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     <div class="footer__info">
       <address class="footer__addr">Москва, Мясницкий проезд, д.3 с.1</address>
       <a class="footer__phone" href="tel:84999228974">8 (499) 922-89-74</a>
@@ -542,10 +563,10 @@
       <div class="modal__close">&times;</div>
       <div class="modal__subtitle">Просто заполните форму заявки</div>
       <div class="modal__descr modal__hidden">и мы перезвоним вам в течении 10 минут</div>
-      <form class="feed-form fed-form_mt25" action="#">
-        <input name="name" required placeholder="Ваше имя" type="text">
-        <input name="phone" required placeholder="Ваш телефон" type="number">
-        <input name="email" required placeholder="Ваш E-mail" type="email">
+      <form class="feed-form feed-form_mt25" action="#">
+        <input name="name" placeholder="Ваше имя" type="text">
+        <input name="phone" placeholder="Ваш телефон">
+        <input name="email" placeholder="Ваш E-mail" type="email">
         <button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
     </form>
     </div>
@@ -556,7 +577,7 @@
       <div class="modal__descr">Пульсометр Polar FT1</div>
       <form class="feed-form fed-form_mt25" action="#">
         <input name="name" required placeholder="Ваше имя" type="text">
-        <input name="phone" required placeholder="Ваш телефон" type="number">
+        <input name="phone" required placeholder="Ваш телефон">
         <input name="email" required placeholder="Ваш E-mail" type="email">
         <button class="button button_submit">Купить</button>
     </form>
@@ -570,10 +591,17 @@
 
   </div>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <a href="#up" class="pageup">
+    <img src="icons/up.svg" alt="up">
+  </a>
+
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script src="js/slick.min.js"></script>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>
