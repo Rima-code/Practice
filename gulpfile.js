@@ -34,33 +34,33 @@ gulp.task('watch', function() {
 });
 
 gulp.task('html', function() {
-    return gulp.src("src/*.html)")
+    return gulp.src("src/*.html")
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("dist/"));
 });
 
 gulp.task('scripts', function() {
-    return gulp.src("src/js/**/*.js)")
+    return gulp.src("src/js/**/*.js")
         .pipe(gulp.dest("dist/js"));
 });
 
 gulp.task('fonts', function() {
-    return gulp.src("src/fonts/**/*)")
+    return gulp.src("src/fonts/**/*")
         .pipe(gulp.dest("dist/fonts"));
 });
 
 gulp.task('icons', function() {
-    return gulp.src("src/icons/**/*)")
+    return gulp.src("src/icons/**/*")
         .pipe(gulp.dest("dist/icons"));
 });
 
 gulp.task('mailer', function() {
-    return gulp.src("src/mailer/**/*)")
+    return gulp.src("src/mailer/**/*")
         .pipe(gulp.dest("dist/mailer"));
 });
 
 gulp.task('images', function() {
-    return gulp.src("src/img/**/*)")
+    return gulp.src("src/img/**/*")
         .pipe(imagemin())
         .pipe(gulp.dest("dist/img"));
 });
