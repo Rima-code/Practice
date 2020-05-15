@@ -16,14 +16,18 @@ $(document).ready(function(){
       {
         breakpoint: 768,
         settings: {
-          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: false,
           arrows: false
         }
       },
       {
         breakpoint: 576,
         settings: {
-          dots: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: false,
           arrows: false
         }
       }

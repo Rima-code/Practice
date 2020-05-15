@@ -1,7 +1,6 @@
 {
   "name": "project_uber",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,6 +13,8 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.13.1"
@@ -23,5 +24,56 @@
     "> 1%",
     "maintained node versions",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "buffer": "^5.6.0",
+    "dom-serializer": "^0.2.2",
+    "domelementtype": "^1.3.1",
+    "domutils": "^1.7.0",
+    "duplexer3": "^0.1.4",
+    "entities": "^2.0.2",
+    "esprima": "^4.0.1",
+    "executable": "^4.1.1",
+    "ext-list": "^2.2.2",
+    "figures": "^1.7.0",
+    "file-type": "^12.4.2",
+    "file-uri-to-path": "^1.0.0",
+    "filename-reserved-regex": "^2.0.0",
+    "from2": "^2.3.0",
+    "fs-constants": "^1.0.0",
+    "fsevents": "^1.2.12",
+    "get-stream": "^4.1.0",
+    "graceful-readlink": "^1.0.1",
+    "has": "^1.0.3",
+    "has-symbol-support-x": "^1.4.2",
+    "has-to-string-tag-x": "^1.4.1",
+    "html-comment-regex": "^1.1.2",
+    "http-cache-semantics": "^3.8.1",
+    "ieee754": "^1.1.13",
+    "import-lazy": "^3.1.0",
+    "irregular-plurals": "^2.0.0",
+    "is-callable": "^1.1.5",
+    "is-date-object": "^1.0.2",
+    "is-gif": "^3.0.0",
+    "is-jpg": "^2.0.0",
+    "is-natural-number": "^4.0.1",
+    "is-object": "^1.0.1",
+    "is-plain-obj": "^1.1.0",
+    "is-png": "^2.0.0",
+    "is-regex": "^1.0.5",
+    "is-retry-allowed": "^1.2.0",
+    "is-stream": "^1.1.0",
+    "is-svg": "^4.2.1",
+    "is-symbol": "^1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rima-code/Puls.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rima-code/Puls/issues"
+  },
+  "homepage": "https://github.com/Rima-code/Puls#readme",
+  "description": ""
 }
