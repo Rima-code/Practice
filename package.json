@@ -37,7 +37,7 @@
     "executable": "^4.1.1",
     "ext-list": "^2.2.2",
     "figures": "^1.7.0",
-    "file-type": "^12.4.2",
+    "file-type": "^16.5.4",
     "file-uri-to-path": "^1.0.0",
     "filename-reserved-regex": "^2.0.0",
     "from2": "^2.3.0",
